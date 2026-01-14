@@ -1,0 +1,13 @@
+# -------- Core Web Backend --------
+flask==3.0.0
+
+# -------- Deep Learning (CPU only) --------
+torch==2.1.0
+torchvision==0.16.0
+
+# -------- Image & Video Processing --------
+opencv-python==4.9.0.80
+numpy==1.26.3
+
+# -------- Utilities --------
+Pillow==10.2.0
