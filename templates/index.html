@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coaster Inspection HMI</title>
+  <style>
+    body { font-family: Arial; text-align: center; }
+    img { width: 45%; border: 2px solid #333; }
+    button { font-size: 20px; padding: 10px 30px; margin: 10px; }
+    #status { font-size: 32px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<h1>COASTER DEFECT INSPECTION – HMI</h1>
+
+<img id="video" src="/video_frame">
+<img id="result">
+
+<br>
+
+<button onclick="capture()">📸 CAPTURE</button>
+<button onclick="resume()">▶ CONTINUE</button>
+
+<div id="status"></div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coaster Image Inspection</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+        img {
+            max-width: 80%;
+            border: 2px solid #333;
+            margin-top: 20px;
+        }
+        .result {
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .PASS { color: green; }
+        .FAIL { color: red; }
+    </style>
+</head>
+<body>
+
+<h1>COASTER IMAGE INSPECTION</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <br><br>
+    <button type="submit" style="font-size:18px;">UPLOAD & INSPECT</button>
+</form>
+
+{% if result %}
+    <div class="result {{ result }}">
+        RESULT: {{ result }}
+    </div>
+{% endif %}
+
+{% if overlay_b64 %}
+    <img src="data:image/jpeg;base64,{{ overlay_b64 }}">
+{% endif %}
+
+</body>
+</html>
